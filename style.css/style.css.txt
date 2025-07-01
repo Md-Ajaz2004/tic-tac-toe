@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #548687;
+    text-align: center;
+}
+.container{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+    
+}
+
+.box{
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    font-size: 8vmin;
+    color: #b0413e;
+    background-color: #ffffc7;
+
+}
+
+#reset-btn{
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #191913;
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+}
+#new-btn{
+     padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #191913;
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+
+}
+
+#msg{
+    color: #ffffc7;
+    font-size: 5vmin;
+}
+
+.msg-container{
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+    position: relative;
+    z-index: 1; 
+}
+
+.hide{
+    display: none;
+}
+
+@keyframes win-animate {
+  0% { background-color: lightgreen; transform: scale(1); }
+  50% { background-color: lime; transform: scale(1.1); }
+  100% { background-color: lightgreen; transform: scale(1); }
+}
+
+.win {
+  animation: win-animate 0.5s ease-in-out 3;
+  border: 2px solid green;
+  font-weight: bold;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.timer {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #ff5722;
+  font-weight: bold;
+}
+
+.credits {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #ff8c00;
+  animation: fadeIn 2s ease-in-out infinite alternate;
+}
+
+
+
+
+.credits .name {
+  font-weight: bold;
+  color: #00ffff;
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #00ffff;
+  }
+  to {
+    text-shadow: 0 0 20px #00ffff, 0 0 30px #0ff;
+  }
+}
+
+.credits .name:hover {
+  color: #ff00ff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+footer.credits {
+    margin-top: 2rem;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ff8c00;
+    animation: fadeIn 2s ease-in-out infinite alternate;
+    position: relative;  /* 👈 Needed to bring it above */
+    z-index: 2;          /* 👈 On top of winner screen */
+}
+
+.credits .name::before {
+  content: "👨‍💻 ";
+}
+.credits .name::after {
+  content: " 🚀";
+}
+
+#new-btn {
+    margin-bottom: 2rem; /* Space between winner button & footer */
+}
+
+#undo-btn {
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #333;
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+    margin-top: 10px;
+}
+
+#mute-btn {
+  padding: 0.6rem 1rem;
+  font-size: 1.5rem;
+  margin-left: 10px;
+  background-color: #444;
+  color: white;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+}

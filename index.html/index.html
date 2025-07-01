@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="msg-container hide">
+        <p id="msg">Winner</p>
+        <button id="new-btn">New Game </button>
+    </div>
+    <main>
+        <h1>Tic Tac Toe</h1>
+
+        
+
+        <div class="scoreboard">
+  <p>Player X: <span id="scoreX">0</span></p>
+  <p>Player O: <span id="scoreO">0</span></p>
+</div>
+
+<div class="timer">Time Left: <span id="timer">10</span> sec</div>
+
+        <div class=" container"> 
+        <div class="game">
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            </div>
+        </div>
+        <button id="reset-btn">Reset Game </button>
+        <button id="undo-btn">Undo Move</button>
+        <button id="mute-btn">🔊</button>
+
+        
+        
+    </main>
+    <footer class="credits">
+  <p>✨ Made with ❤ by <span class="name">Md Ajaz</span></p>
+</footer>
+   <script src="app.js"></script>
+</body>
+</html>
